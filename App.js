@@ -1,5 +1,7 @@
 import { useFonts } from 'expo-font';
 import ShopNavigation from './src/navigation/ShopNavigation'
+import BottomTabNavigator from './src/navigation/BottomTabNavigator';
+
 
 export default function App() {
 
@@ -11,7 +13,7 @@ export default function App() {
     return null
   }
 
-  return <ShopNavigation/>
+  return <BottomTabNavigator/>
 
 }
 
