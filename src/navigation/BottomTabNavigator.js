@@ -4,6 +4,7 @@ import CartNavigator from './CartNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, StyleSheet, Text } from 'react-native';
 import IonIcons from '@expo/vector-icons/Ionicons'
+import OrderNavigator from './OrderNavigator';
 
 const BottomTabs = createBottomTabNavigator();
 
@@ -34,16 +35,28 @@ export default MyTabs = () =>  {
         />
 
         <BottomTabs.Screen 
-        name='CartTab'
-        component={CartNavigator}
-        options={{
-          tabBarIcon: ({focus}) => (
-            <View style={styles.item}>
-             <IonIcons name='cart' size={20} color={ focus ? 'black' : '#a19594'}/>
-              <Text>Carrito</Text>
-            </View>
-          )
-        }}
+          name='CartTab'
+          component={CartNavigator}
+          options={{
+            tabBarIcon: ({focus}) => (
+              <View style={styles.item}>
+              <IonIcons name='cart' size={20} color={ focus ? 'black' : '#a19594'}/>
+                <Text>Carrito</Text>
+              </View>
+            )
+          }}
+        /> 
+        <BottomTabs.Screen 
+          name='OrdersTab'
+          component={OrderNavigator}
+          options={{
+            tabBarIcon: ({focus}) => (
+              <View style={styles.item}>
+              <IonIcons name='list' size={20} color={ focus ? 'black' : '#a19594'}/>
+                <Text>Ordenes</Text>
+              </View>
+            )
+          }}
         /> 
     </BottomTabs.Navigator>
     </NavigationContainer>
