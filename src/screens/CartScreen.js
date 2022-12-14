@@ -11,6 +11,7 @@ const CartScreen = () => {
 
   const handleConfirmCart = () => {
     dispatch(confirmCart(items, total))
+
   }
   const handleDeleteItem = (id) => {
     dispatch(removeItem(id))
@@ -34,7 +35,7 @@ const CartScreen = () => {
           <Text style={styles.text}>Confirmar</Text>
           <View style={styles.total}>
             <Text style={styles.text}>Total:</Text>
-            <Text  style={styles.text}>${total}</Text>
+            <Text style={styles.text}>${total}</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -68,7 +69,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   total: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    
   },
   text: {
     fontSize: 18,
